@@ -1,6 +1,6 @@
 //
-//  APSwiftHelpersTests.swift
-//  APSwiftHelpersTests
+//  DebugLoggingTests.swift
+//  DebugLoggingTests
 //
 //  Created by Alex Plescan on 19/02/2016.
 //  Copyright © 2016 Alex Plescan. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class APSwiftHelpersTests: XCTestCase {
+class DebugLoggingTests: XCTestCase {
 
     func testDebugLogFormat() {
         let printable = Printable()

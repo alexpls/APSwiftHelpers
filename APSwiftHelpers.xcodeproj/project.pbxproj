@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		FA17A7591C76E436005D730B /* APSwiftHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = FA17A7581C76E436005D730B /* APSwiftHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA17A7601C76E436005D730B /* APSwiftHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17A7551C76E436005D730B /* APSwiftHelpers.framework */; };
-		FA17A7651C76E436005D730B /* APSwiftHelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17A7641C76E436005D730B /* APSwiftHelpersTests.swift */; };
+		FA17A7651C76E436005D730B /* DebugLoggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17A7641C76E436005D730B /* DebugLoggingTests.swift */; };
 		FA17A7701C76E444005D730B /* DebugLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17A76F1C76E444005D730B /* DebugLogging.swift */; };
 		FA17A7711C76E5A6005D730B /* DebugLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17A76F1C76E444005D730B /* DebugLogging.swift */; };
 		FA17A7731C76E705005D730B /* Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17A7721C76E705005D730B /* Printable.swift */; };
+		FAC6482D1C785FDE009DC380 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482C1C785FDE009DC380 /* Dispatch.swift */; };
+		FAC6482F1C786365009DC380 /* DispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482E1C786365009DC380 /* DispatchTests.swift */; };
+		FAC648301C786375009DC380 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482C1C785FDE009DC380 /* Dispatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,10 +33,12 @@
 		FA17A7581C76E436005D730B /* APSwiftHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APSwiftHelpers.h; sourceTree = "<group>"; };
 		FA17A75A1C76E436005D730B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA17A75F1C76E436005D730B /* APSwiftHelpersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APSwiftHelpersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA17A7641C76E436005D730B /* APSwiftHelpersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APSwiftHelpersTests.swift; sourceTree = "<group>"; };
+		FA17A7641C76E436005D730B /* DebugLoggingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLoggingTests.swift; sourceTree = "<group>"; };
 		FA17A7661C76E436005D730B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA17A76F1C76E444005D730B /* DebugLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLogging.swift; sourceTree = "<group>"; };
 		FA17A7721C76E705005D730B /* Printable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printable.swift; sourceTree = "<group>"; };
+		FAC6482C1C785FDE009DC380 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		FAC6482E1C786365009DC380 /* DispatchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +84,7 @@
 				FA17A7581C76E436005D730B /* APSwiftHelpers.h */,
 				FA17A75A1C76E436005D730B /* Info.plist */,
 				FA17A76F1C76E444005D730B /* DebugLogging.swift */,
+				FAC6482C1C785FDE009DC380 /* Dispatch.swift */,
 			);
 			path = APSwiftHelpers;
 			sourceTree = "<group>";
@@ -86,9 +92,10 @@
 		FA17A7631C76E436005D730B /* APSwiftHelpersTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA17A7641C76E436005D730B /* APSwiftHelpersTests.swift */,
-				FA17A7721C76E705005D730B /* Printable.swift */,
+				FA17A7641C76E436005D730B /* DebugLoggingTests.swift */,
+				FAC6482E1C786365009DC380 /* DispatchTests.swift */,
 				FA17A7661C76E436005D730B /* Info.plist */,
+				FA17A7721C76E705005D730B /* Printable.swift */,
 			);
 			path = APSwiftHelpersTests;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA17A7701C76E444005D730B /* DebugLogging.swift in Sources */,
+				FAC6482D1C785FDE009DC380 /* Dispatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +217,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA17A7651C76E436005D730B /* APSwiftHelpersTests.swift in Sources */,
+				FA17A7651C76E436005D730B /* DebugLoggingTests.swift in Sources */,
+				FAC6482F1C786365009DC380 /* DispatchTests.swift in Sources */,
+				FAC648301C786375009DC380 /* Dispatch.swift in Sources */,
 				FA17A7711C76E5A6005D730B /* DebugLogging.swift in Sources */,
 				FA17A7731C76E705005D730B /* Printable.swift in Sources */,
 			);
