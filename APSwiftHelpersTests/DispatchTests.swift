@@ -11,7 +11,7 @@ import XCTest
 class DispatchTests: XCTestCase {
 
     func testPerformBlockOnMainThread() {
-        let expectation = expectationWithDescription("expectation")
+        let expectation = expectationWithDescription("run on main thread")
 
         performOn(.Main) {
             XCTAssert(NSThread.isMainThread(), "should be on main thread")
@@ -22,7 +22,7 @@ class DispatchTests: XCTestCase {
     }
     
     func testPerformBlockOnBackgroundThread() {
-        let expectation = expectationWithDescription("")
+        let expectation = expectationWithDescription("run off main thread")
         
         performOn(.Background) {
             XCTAssert(!NSThread.isMainThread(), "should not be on main thread")
