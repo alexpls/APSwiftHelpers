@@ -9,13 +9,13 @@
 import Foundation
 
 /**
-Perform a block on the specified queue. This is just a nicer wrapper around the dispatch_async()
-Grand Central Dispatch function.
+ Perform a block on the specified queue. This is just a nicer wrapper around the dispatch_async()
+ Grand Central Dispatch function.
 
-- Parameter queueType:  The queue to execute the block on
-- Parameter closure:    The block to execute
+ - Parameter queueType:  The queue to execute the block on
+ - Parameter closure:    The block to execute
 
-*Example usage:*
+ *Example usage:*
  ```
  performOn(.Main) { self.tableView.reloadData() }
  ```
@@ -45,9 +45,10 @@ public func delay(delay: NSTimeInterval, queueType: QueueType = .Main, closure: 
     dispatch_after(time, queueType.queue, closure)
 }
 
-/// Queues which we can perform blocks on through Grand Central Dispatch. 
-/// This shouldn't need to be accessed directly, but rather through 
-/// performOn(queueType: QueueType, closure: () -> ()).
+/**
+ A wrapper around GCD queues. This shouldn't be accessed directly, but rather through
+ the helper functions supplied by the APSwiftHelpers package.
+*/
 public enum QueueType {
     case Main
     case Background
