@@ -24,6 +24,27 @@ public func performOn(queueType: QueueType, closure: () -> ()) {
     dispatch_async(queueType.queue, closure)
 }
 
+/**
+ Perform a block on a queue after waiting the specified time.
+ 
+ - Parameter delay:     Time to wait in seconds before performing the block
+ - Parameter queueType: Queue to execute the block on (default is the main queue)
+ - Parameter closure:   Block to execute after the time specified in delay has passed
+ 
+ *Example usage:*
+ ```
+ // Wait for 200ms then run the block on the main queue
+ delay(0.2) { alert.hide() }
+ 
+ // Wait for 1s then run the block on a background queue
+ delay(1.0, queueType: .Background) { alert.hide() }
+ ```
+*/
+public func delay(delay: NSTimeInterval, queueType: QueueType = .Main, closure: () -> ()) {
+    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+    dispatch_after(time, queueType.queue, closure)
+}
+
 /// Queues which we can perform blocks on through Grand Central Dispatch. 
 /// This shouldn't need to be accessed directly, but rather through 
 /// performOn(queueType: QueueType, closure: () -> ()).
