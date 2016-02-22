@@ -52,6 +52,8 @@ public func delay(delay: NSTimeInterval, queueType: QueueType = .Main, closure: 
 public enum QueueType {
     case Main
     case Background
+    case LowPriority
+    case HighPriority
     
     var queue: dispatch_queue_t {
         switch self {
@@ -59,6 +61,10 @@ public enum QueueType {
             return dispatch_get_main_queue()
         case .Background:
             return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
+        case .LowPriority:
+            return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)
+        case .HighPriority:
+            return dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)
         }
     }
 }
