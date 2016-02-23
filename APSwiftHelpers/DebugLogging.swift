@@ -6,7 +6,17 @@
 //  Copyright © 2016 Alex Plescan. All rights reserved.
 //
 
-/// Prints a formatted debug message
+/**
+ Prints a log message prefixed by the debugDescription of the passed in item.
+
+ Note: passed in item must comply to CustomDebugStringConvertible and provide
+ a debugDescription.
+
+ *Example usage:*
+ ```
+ debugLog(movie, "fetching poster from server")
+ ```
+*/
 public func debugLog<T: CustomDebugStringConvertible>(item: T, message: String) {
     print(debugLogFormatMessage(item, message: message))
 }
