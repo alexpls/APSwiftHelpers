@@ -13,7 +13,7 @@ import Foundation
  need to be initialized directly.
 */
 public struct App {
-    /// Specifies whether the app is running as part of the iPhone
+    /// Specifies whether the app is running within the iPhone
     /// simulator or not.
     public static var inSimulator: Bool {
         return (TARGET_IPHONE_SIMULATOR != 0)
