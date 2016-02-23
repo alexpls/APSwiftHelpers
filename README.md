@@ -4,7 +4,7 @@ Common functions I've used while developing iOS apps in Swift. Find them helpful
 
 ### Dispatch
 
-#### `performOn(queueType: QueueType, closure: () -> ())`
+##### `performOn(queueType: QueueType, closure: () -> ())`
 Perform a block on the specified queue. This is just a nicer wrapper around the dispatch_async()
 Grand Central Dispatch function.
 
@@ -16,7 +16,7 @@ Grand Central Dispatch function.
 performOn(.Main) { self.tableView.reloadData() }
 ```
 
-#### `delay(delay: NSTimeInterval, queueType: QueueType = .Main, closure: () -> ())`
+##### `delay(delay: NSTimeInterval, queueType: QueueType = .Main, closure: () -> ())`
 Perform a block on a queue after waiting the specified time.
 
 - Parameter delay:     Time to wait in seconds before performing the block
@@ -34,7 +34,7 @@ delay(1.0, queueType: .Background) { alert.hide() }
 
 ### DebugLogging
 
-#### `debugLog<T: CustomDebugStringConvertible>(item: T, message: String)`
+##### `debugLog<T: CustomDebugStringConvertible>(item: T, message: String)`
 Prints a log message prefixed by the debugDescription of the passed in item.
 
 Note: passed in item must comply to CustomDebugStringConvertible and provide  a debugDescription.
@@ -46,5 +46,5 @@ debugLog(movie, "fetching poster from server")
 
 ### App
 
-#### App.inSimulator (Bool)
+##### App.inSimulator (Bool)
 Specifies whether the app is running within the iPhone simulator or not.
