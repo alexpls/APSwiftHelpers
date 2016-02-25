@@ -13,6 +13,10 @@
 		FA17A7701C76E444005D730B /* DebugLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17A76F1C76E444005D730B /* DebugLogging.swift */; };
 		FA17A7711C76E5A6005D730B /* DebugLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17A76F1C76E444005D730B /* DebugLogging.swift */; };
 		FA17A7731C76E705005D730B /* Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17A7721C76E705005D730B /* Printable.swift */; };
+		FAA5A9D71C7EE9A900D2F6BE /* NSCoding+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5A9D61C7EE9A900D2F6BE /* NSCoding+Helpers.swift */; };
+		FAA5A9D81C7EEA9D00D2F6BE /* NSCoding+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5A9D61C7EE9A900D2F6BE /* NSCoding+Helpers.swift */; };
+		FAA5A9DA1C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5A9D91C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift */; };
+		FAA5A9DC1C7EECF300D2F6BE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5A9DB1C7EECF300D2F6BE /* Note.swift */; };
 		FAC6482D1C785FDE009DC380 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482C1C785FDE009DC380 /* Dispatch.swift */; };
 		FAC6482F1C786365009DC380 /* DispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482E1C786365009DC380 /* DispatchTests.swift */; };
 		FAC648301C786375009DC380 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482C1C785FDE009DC380 /* Dispatch.swift */; };
@@ -40,6 +44,9 @@
 		FA17A7661C76E436005D730B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA17A76F1C76E444005D730B /* DebugLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLogging.swift; sourceTree = "<group>"; };
 		FA17A7721C76E705005D730B /* Printable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printable.swift; sourceTree = "<group>"; };
+		FAA5A9D61C7EE9A900D2F6BE /* NSCoding+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoding+Helpers.swift"; sourceTree = "<group>"; };
+		FAA5A9D91C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoding+HelpersTests.swift"; sourceTree = "<group>"; };
+		FAA5A9DB1C7EECF300D2F6BE /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		FAC6482C1C785FDE009DC380 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		FAC6482E1C786365009DC380 /* DispatchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTests.swift; sourceTree = "<group>"; };
 		FAC648311C7A72A0009DC380 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -91,6 +98,7 @@
 				FA17A76F1C76E444005D730B /* DebugLogging.swift */,
 				FAC6482C1C785FDE009DC380 /* Dispatch.swift */,
 				FAC648311C7A72A0009DC380 /* App.swift */,
+				FAA5A9D61C7EE9A900D2F6BE /* NSCoding+Helpers.swift */,
 			);
 			path = APSwiftHelpers;
 			sourceTree = "<group>";
@@ -98,13 +106,23 @@
 		FA17A7631C76E436005D730B /* APSwiftHelpersTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAA5A9DD1C7EECFC00D2F6BE /* Test support */,
 				FA17A7641C76E436005D730B /* DebugLoggingTests.swift */,
 				FAC6482E1C786365009DC380 /* DispatchTests.swift */,
 				FAC648331C7A72E1009DC380 /* AppTests.swift */,
 				FA17A7661C76E436005D730B /* Info.plist */,
-				FA17A7721C76E705005D730B /* Printable.swift */,
+				FAA5A9D91C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift */,
 			);
 			path = APSwiftHelpersTests;
+			sourceTree = "<group>";
+		};
+		FAA5A9DD1C7EECFC00D2F6BE /* Test support */ = {
+			isa = PBXGroup;
+			children = (
+				FA17A7721C76E705005D730B /* Printable.swift */,
+				FAA5A9DB1C7EECF300D2F6BE /* Note.swift */,
+			);
+			name = "Test support";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA5A9D71C7EE9A900D2F6BE /* NSCoding+Helpers.swift in Sources */,
 				FAC648321C7A72A0009DC380 /* App.swift in Sources */,
 				FA17A7701C76E444005D730B /* DebugLogging.swift in Sources */,
 				FAC6482D1C785FDE009DC380 /* Dispatch.swift in Sources */,
@@ -229,8 +248,11 @@
 				FAC6482F1C786365009DC380 /* DispatchTests.swift in Sources */,
 				FAC648301C786375009DC380 /* Dispatch.swift in Sources */,
 				FA17A7711C76E5A6005D730B /* DebugLogging.swift in Sources */,
+				FAA5A9D81C7EEA9D00D2F6BE /* NSCoding+Helpers.swift in Sources */,
+				FAA5A9DC1C7EECF300D2F6BE /* Note.swift in Sources */,
 				FA17A7731C76E705005D730B /* Printable.swift in Sources */,
 				FAC648351C7A72E4009DC380 /* App.swift in Sources */,
+				FAA5A9DA1C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift in Sources */,
 				FAC648341C7A72E1009DC380 /* AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

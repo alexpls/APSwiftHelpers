@@ -3,45 +3,52 @@
 Common functions I use while developing iOS apps in Swift. Find them helpful? Help yourself.
 
 ### Dispatch
+Helpers for working with Grand Central Dispatch queues.
 
-#### `performOn(queueType: QueueType, closure: () -> ())`
-Perform a block on the specified queue. This is just a nicer wrapper around the dispatch_async()
-Grand Central Dispatch function.
-
-- Parameter queueType:  The queue to execute the block on
-- Parameter closure:    The block to execute
-
-```
+```swift
+// Perform a block on the given queue
 performOn(.Main) { self.tableView.reloadData() }
-```
+performOn(.LowPriority) { self.clearCache() }
 
-#### `delay(delay: NSTimeInterval, queueType: QueueType = .Main, closure: () -> ())`
-Perform a block on a queue after waiting the specified time.
+// Delay a block on the given queue - if no queue is provided .Main is assumed
+delay(0.5) { self.hideSpinner() }
+delay(30, .Background) { self.logActivity() }
 
-- Parameter delay:     Time to wait in seconds before performing the block
-- Parameter queueType: Queue to execute the block on (default is the main queue)
-- Parameter closure:   Block to execute after the time specified in delay has passed
-
-```
-// Wait for 200ms then run the block on the main queue
-delay(0.2) { alert.hide() }
-
-// Wait for 1s then run the block on a background queue
-delay(1.0, queueType: .Background) { alert.hide() }
+// Queue types available:
+enum QueueType {
+  case Main         // The app's main queue
+  case Background   // Background queue (DISPATCH_QUEUE_PRIORITY_BACKGROUND)
+  case LowPriority  // Background queue (DISPATCH_QUEUE_PRIORITY_LOW)
+  case HighPriority // Background queue (DISPATCH_QUEUE_PRIORITY_HIGH)
+}
 ```
 
 ### DebugLogging
+```swift
+// Print a formatted log message for a CustomDebugStringConvertible
 
-#### `debugLog<T: CustomDebugStringConvertible>(item: T, message: String)`
-Prints a log message prefixed by the debugDescription of the passed in item.
+struct Animal: CustomDebugStringConvertible {
+  let name: String
+  var debugDescription: String { return name }
+}
 
-Note: passed in item must comply to CustomDebugStringConvertible and provide  a debugDescription.
-
+let dog = Animal(name: "Woofy")
+debugLog(dog, "is tired") // prints "(Woofy) is tired" to the console
 ```
-debugLog(movie, "fetching poster from server")
+
+### NSCoding+Helpers
+Extension to NSCoding to make it more Swift-y.
+```swift
+// Archive an NSCoding to NSData
+let note = Note(title: "secret", content: "I like turtles")
+let archivedData = note.archive()
+
+// Unarchive NSData into an NSCoding object
+let unarchivedNote = Note.unarchive(archivedData)
 ```
 
 ### App
-
-#### `App.inSimulator` (Bool)
-Specifies whether the app is running within the iPhone simulator or not.
+```swift
+// returns true/false whether the app running within the simulator or not
+App.inSimulator
+```
