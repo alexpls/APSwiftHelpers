@@ -45,6 +45,7 @@ let archivedData = note.archive()
 
 // Unarchive NSData into an NSCoding object
 let unarchivedNote = Note.unarchive(archivedData)
+unarchivedNote.content // "I like turtles"
 ```
 
 ### App
