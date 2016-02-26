@@ -1,4 +1,5 @@
 ## APSwiftHelpers
+[![Build Status](https://travis-ci.org/alexpls/APSwiftHelpers.svg?branch=master)](https://travis-ci.org/alexpls/APSwiftHelpers)
 
 Common functions I use while developing iOS apps in Swift. Find them helpful? Help yourself.
 
