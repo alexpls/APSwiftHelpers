@@ -49,6 +49,12 @@ let unarchivedNote = Note.unarchive(archivedData)
 unarchivedNote.content // "I like turtles"
 ```
 
+### CATransaction+Helpers
+```swift
+// Run the given block with CAAnimations disabled
+withCAAnimationsDisabled { self.view.resize() }
+```
+
 ### App
 ```swift
 // returns true/false whether the app running within the simulator or not
