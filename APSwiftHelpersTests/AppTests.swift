@@ -37,7 +37,7 @@ class AppTests: XCTestCase {
     }
     
     func testReturnsVersionOfApplication() {
-        if let version = App.shortVersion {
+        if let version = App.version {
             XCTAssertEqual(version, "1.1")
         } else {
             XCTAssert(false, "expected to get version of application")

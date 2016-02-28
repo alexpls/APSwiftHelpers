@@ -25,7 +25,7 @@ public struct App {
     }
     
     /// Get the version of the currently running application
-    public static var shortVersion: String? {
+    public static var version: String? {
         return getFromInfo("CFBundleShortVersionString")
     }
     
@@ -34,7 +34,7 @@ public struct App {
      in this format: `MyApp (1.1)`.
     */
     public static var formattedNameAndVersion: String? {
-        if let name = App.name, let ver = App.shortVersion {
+        if let name = App.name, let ver = App.version {
             return "\(name) (\(ver))"
         } else {
             return nil
