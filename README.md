@@ -57,6 +57,12 @@ withCAAnimationsDisabled { self.view.resize() }
 
 ### App
 ```swift
-// returns true/false whether the app running within the simulator or not
+// Get info about the currently running app (taken from the
+// main bundle's) Info.plist file
+App.name
+App.version
+App.formattedNameAndVersion
+
+// Returns true/false whether the app running within the simulator or not
 App.inSimulator
 ```
