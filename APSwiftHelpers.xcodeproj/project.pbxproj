@@ -20,6 +20,7 @@
 		FAA5A9D81C7EEA9D00D2F6BE /* NSCoding+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5A9D61C7EE9A900D2F6BE /* NSCoding+Helpers.swift */; };
 		FAA5A9DA1C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5A9D91C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift */; };
 		FAA5A9DC1C7EECF300D2F6BE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5A9DB1C7EECF300D2F6BE /* Note.swift */; };
+		FAB0E7601C82D3E600775CF8 /* PlistStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0E75F1C82D3E600775CF8 /* PlistStub.swift */; };
 		FAC6482D1C785FDE009DC380 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482C1C785FDE009DC380 /* Dispatch.swift */; };
 		FAC6482F1C786365009DC380 /* DispatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482E1C786365009DC380 /* DispatchTests.swift */; };
 		FAC648301C786375009DC380 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6482C1C785FDE009DC380 /* Dispatch.swift */; };
@@ -52,6 +53,7 @@
 		FAA5A9D61C7EE9A900D2F6BE /* NSCoding+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoding+Helpers.swift"; sourceTree = "<group>"; };
 		FAA5A9D91C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoding+HelpersTests.swift"; sourceTree = "<group>"; };
 		FAA5A9DB1C7EECF300D2F6BE /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		FAB0E75F1C82D3E600775CF8 /* PlistStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistStub.swift; sourceTree = "<group>"; };
 		FAC6482C1C785FDE009DC380 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		FAC6482E1C786365009DC380 /* DispatchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTests.swift; sourceTree = "<group>"; };
 		FAC648311C7A72A0009DC380 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				FA17A7721C76E705005D730B /* Printable.swift */,
 				FAA5A9DB1C7EECF300D2F6BE /* Note.swift */,
+				FAB0E75F1C82D3E600775CF8 /* PlistStub.swift */,
 			);
 			name = "Test support";
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				FA17A7731C76E705005D730B /* Printable.swift in Sources */,
 				FAC648351C7A72E4009DC380 /* App.swift in Sources */,
 				FAA5A9DA1C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift in Sources */,
+				FAB0E7601C82D3E600775CF8 /* PlistStub.swift in Sources */,
 				FAC648341C7A72E1009DC380 /* AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

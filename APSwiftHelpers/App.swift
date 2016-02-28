@@ -18,4 +18,40 @@ public struct App {
     public static var inSimulator: Bool {
         return (TARGET_IPHONE_SIMULATOR != 0)
     }
+    
+    /// Get the name of the currently running application
+    public static var name: String? {
+        return getFromInfo("CFBundleDisplayName")
+    }
+    
+    /// Get the version of the currently running application
+    public static var shortVersion: String? {
+        return getFromInfo("CFBundleShortVersionString")
+    }
+    
+    /**
+     Get a formatted name and version for the running application
+     in this format: `MyApp (1.1)`.
+    */
+    public static var formattedNameAndVersion: String? {
+        if let name = App.name, let ver = App.shortVersion {
+            return "\(name) (\(ver))"
+        } else {
+            return nil
+        }
+    }
+    
+    /// Internal protocol used for stubbing out NSBundle behaviour
+    internal static var plistProvider: PlistProvider = NSBundle.mainBundle()
+    
+    /// Get info from the bundle's plist for a specficic key
+    private static func getFromInfo(key: String) -> String? {
+        return plistProvider.objectForInfoDictionaryKey(key) as? String
+    }
 }
+
+protocol PlistProvider {
+    func objectForInfoDictionaryKey(key: String) -> AnyObject?
+}
+
+extension NSBundle: PlistProvider {}
