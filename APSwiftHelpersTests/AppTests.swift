@@ -13,11 +13,13 @@ class AppTests: XCTestCase {
     var initialPlistProvier: PlistProvider?
     
     override func setUp() {
+        super.setUp()
         initialPlistProvier = App.plistProvider
         App.plistProvider = PlistStub()
     }
     
     override func tearDown() {
+        super.tearDown()
         if let provider = initialPlistProvier {
             App.plistProvider = provider
         }
