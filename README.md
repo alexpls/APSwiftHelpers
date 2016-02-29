@@ -55,6 +55,13 @@ unarchivedNote.content // "I like turtles"
 withCAAnimationsDisabled { self.view.resize() }
 ```
 
+### NSLocale+Helpers
+```swift
+// Fetch region info from NSLocale:
+NSLocale.currentLocale().countryCode // String e.g.: "US"
+NSLocale.currentLocale().countryName // String e.g.: "United States"
+```
+
 ### App
 ```swift
 // Get info about the currently running app (taken from the
