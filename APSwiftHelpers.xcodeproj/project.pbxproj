@@ -27,6 +27,9 @@
 		FAC648321C7A72A0009DC380 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC648311C7A72A0009DC380 /* App.swift */; };
 		FAC648341C7A72E1009DC380 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC648331C7A72E1009DC380 /* AppTests.swift */; };
 		FAC648351C7A72E4009DC380 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC648311C7A72A0009DC380 /* App.swift */; };
+		FAC681991C842C6500230945 /* NSLocale+HelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC681981C842C6500230945 /* NSLocale+HelpersTests.swift */; };
+		FAC6819B1C842CE000230945 /* NSLocale+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6819A1C842CE000230945 /* NSLocale+Helpers.swift */; };
+		FAC6819C1C842CEE00230945 /* NSLocale+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6819A1C842CE000230945 /* NSLocale+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,8 @@
 		FAC6482E1C786365009DC380 /* DispatchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchTests.swift; sourceTree = "<group>"; };
 		FAC648311C7A72A0009DC380 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		FAC648331C7A72E1009DC380 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
+		FAC681981C842C6500230945 /* NSLocale+HelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+HelpersTests.swift"; sourceTree = "<group>"; };
+		FAC6819A1C842CE000230945 /* NSLocale+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 				FAC648311C7A72A0009DC380 /* App.swift */,
 				FAA5A9D61C7EE9A900D2F6BE /* NSCoding+Helpers.swift */,
 				FA46828C1C81A9A8005DD9D5 /* CATransaction+Helpers.swift */,
+				FAC6819A1C842CE000230945 /* NSLocale+Helpers.swift */,
 			);
 			path = APSwiftHelpers;
 			sourceTree = "<group>";
@@ -121,6 +127,7 @@
 				FA17A7661C76E436005D730B /* Info.plist */,
 				FAA5A9D91C7EEAAD00D2F6BE /* NSCoding+HelpersTests.swift */,
 				FA46828F1C81AA53005DD9D5 /* CATransaction+HelpersTests.swift */,
+				FAC681981C842C6500230945 /* NSLocale+HelpersTests.swift */,
 			);
 			path = APSwiftHelpersTests;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 			files = (
 				FAA5A9D71C7EE9A900D2F6BE /* NSCoding+Helpers.swift in Sources */,
 				FAC648321C7A72A0009DC380 /* App.swift in Sources */,
+				FAC6819B1C842CE000230945 /* NSLocale+Helpers.swift in Sources */,
 				FA17A7701C76E444005D730B /* DebugLogging.swift in Sources */,
 				FA46828D1C81A9A8005DD9D5 /* CATransaction+Helpers.swift in Sources */,
 				FAC6482D1C785FDE009DC380 /* Dispatch.swift in Sources */,
@@ -257,11 +265,13 @@
 			files = (
 				FA46828E1C81AA3F005DD9D5 /* CATransaction+Helpers.swift in Sources */,
 				FA17A7651C76E436005D730B /* DebugLoggingTests.swift in Sources */,
+				FAC681991C842C6500230945 /* NSLocale+HelpersTests.swift in Sources */,
 				FAC6482F1C786365009DC380 /* DispatchTests.swift in Sources */,
 				FAC648301C786375009DC380 /* Dispatch.swift in Sources */,
 				FA4682901C81AA53005DD9D5 /* CATransaction+HelpersTests.swift in Sources */,
 				FA17A7711C76E5A6005D730B /* DebugLogging.swift in Sources */,
 				FAA5A9D81C7EEA9D00D2F6BE /* NSCoding+Helpers.swift in Sources */,
+				FAC6819C1C842CEE00230945 /* NSLocale+Helpers.swift in Sources */,
 				FAA5A9DC1C7EECF300D2F6BE /* Note.swift in Sources */,
 				FA17A7731C76E705005D730B /* Printable.swift in Sources */,
 				FAC648351C7A72E4009DC380 /* App.swift in Sources */,
