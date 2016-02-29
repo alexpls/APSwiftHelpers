@@ -16,11 +16,15 @@
  ```
  debugLog(movie, "fetching poster from server")
  ```
+
+ - Parameter item:      The CustomDebugStringConvertible item
+ - Parameter message:   The additional message to suffix the debugDescription of `item`
 */
 public func debugLog<T: CustomDebugStringConvertible>(item: T, message: String) {
     print(debugLogFormatMessage(item, message: message))
 }
 
+// swiftlint:disable:next line_length
 internal func debugLogFormatMessage<T: CustomDebugStringConvertible>(item: T, message: String) -> String {
     return "(\(item.debugDescription)) \(message)"
 }

@@ -15,5 +15,5 @@ class DebugLoggingTests: XCTestCase {
         let formatted = debugLogFormatMessage(printable, message: "Let's go")
         XCTAssertEqual(formatted, "(Hey!) Let's go")
     }
-    
+
 }

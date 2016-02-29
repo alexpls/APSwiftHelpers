@@ -8,16 +8,16 @@
 
 import XCTest
 
-class NSLocale_HelpersTests: XCTestCase {
+class NSLocaleHelpersTests: XCTestCase {
 
-    private let USLocale = NSLocale(localeIdentifier: "en_US")
-    
+    private let usLocale = NSLocale(localeIdentifier: "en_US")
+
     func testGetLocaleCountryCode() {
-        XCTAssertEqual(USLocale.countryCode, "US")
+        XCTAssertEqual(usLocale.countryCode, "US")
     }
-    
+
     func testGetLocaleCountryName() {
-        XCTAssertEqual(USLocale.countryName, "United States")
+        XCTAssertEqual(usLocale.countryName, "United States")
     }
 
 }
