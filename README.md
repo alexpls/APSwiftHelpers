@@ -73,3 +73,14 @@ App.formattedNameAndVersion
 // Returns true/false whether the app running within the simulator or not
 App.inSimulator
 ```
+
+### Installing via [CocoaPods](https://cocoapods.org)
+
+1. Add (or create) a Podfile containing this:
+```
+use_frameworks!
+pod 'APSwiftHelpers'
+```
+
+2. Run `$ pod install`.
+3. Done!
