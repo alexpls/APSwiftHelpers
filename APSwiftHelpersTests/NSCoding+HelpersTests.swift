@@ -1,11 +1,3 @@
-//
-//  NSCoding+HelpersTests.swift
-//  APSwiftHelpers
-//
-//  Created by Alex Plescan on 25/02/2016.
-//  Copyright © 2016 Alex Plescan. All rights reserved.
-//
-
 import XCTest
 
 import Foundation

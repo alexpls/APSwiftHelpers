@@ -1,11 +1,3 @@
-//
-//  NSLocale+HelpersTests.swift
-//  APSwiftHelpers
-//
-//  Created by Alex Plescan on 29/02/2016.
-//  Copyright © 2016 Alex Plescan. All rights reserved.
-//
-
 import XCTest
 
 class NSLocaleHelpersTests: XCTestCase {

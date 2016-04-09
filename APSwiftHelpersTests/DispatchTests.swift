@@ -1,11 +1,3 @@
-//
-//  DispatchTests.swift
-//  APSwiftHelpers
-//
-//  Created by Alex Plescan on 20/02/2016.
-//  Copyright © 2016 Alex Plescan. All rights reserved.
-//
-
 import XCTest
 
 class DispatchTests: XCTestCase {
