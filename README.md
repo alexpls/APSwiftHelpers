@@ -1,7 +1,22 @@
 ## APSwiftHelpers
 [![CocoaPods](https://img.shields.io/cocoapods/v/APSwiftHelpers.svg)](https://cocoapods.org/pods/APSwiftHelpers) [![Build Status](https://travis-ci.org/alexpls/APSwiftHelpers.svg?branch=master)](https://travis-ci.org/alexpls/APSwiftHelpers)
 
-Common functions I use while developing iOS apps in Swift. Find them helpful? Help yourself.
+Common helpers for developing iOS apps in Swift. Find them helpful? Help yourself.
+
+## Installation
+
+### [CocoaPods](https://cocoapods.org)
+
+1. Add (or create) a Podfile containing this:
+```
+use_frameworks!
+pod 'APSwiftHelpers'
+```
+
+2. Run `pod install`.
+3. Done!
+
+## Usage
 
 ### Dispatch
 Helpers for working with Grand Central Dispatch queues.
@@ -22,19 +37,6 @@ enum QueueType {
   case LowPriority  // Background queue (DISPATCH_QUEUE_PRIORITY_LOW)
   case HighPriority // Background queue (DISPATCH_QUEUE_PRIORITY_HIGH)
 }
-```
-
-### DebugLogging
-```swift
-// Print a formatted log message for a CustomDebugStringConvertible
-
-struct Animal: CustomDebugStringConvertible {
-  let name: String
-  var debugDescription: String { return name }
-}
-
-let dog = Animal(name: "Woofy")
-debugLog(dog, "is tired") // prints "(Woofy) is tired" to the console
 ```
 
 ### NSCoding+Helpers
@@ -74,13 +76,15 @@ App.formattedNameAndVersion
 App.inSimulator
 ```
 
-### Installing via [CocoaPods](https://cocoapods.org)
+### DebugLogging
+```swift
+// Print a formatted log message for a CustomDebugStringConvertible
 
-1. Add (or create) a Podfile containing this:
-```
-use_frameworks!
-pod 'APSwiftHelpers'
-```
+struct Animal: CustomDebugStringConvertible {
+  let name: String
+  var debugDescription: String { return name }
+}
 
-2. Run `$ pod install`.
-3. Done!
+let dog = Animal(name: "Woofy")
+debugLog(dog, "is tired") // prints "(Woofy) is tired" to the console
+```
