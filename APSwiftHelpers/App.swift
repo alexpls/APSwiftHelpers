@@ -11,6 +11,14 @@ public struct App {
         return (TARGET_IPHONE_SIMULATOR != 0)
     }
 
+    /**
+     Specifies whether the app is running in a Debug configuration.
+     - Returns: Bool whether the app is running in simulator
+    */
+    public static var isDebug: Bool {
+        return _isDebugAssertConfiguration()
+    }
+
     /// Get the name of the currently running application
     public static var name: String? {
         return getFromInfo("CFBundleDisplayName")

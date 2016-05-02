@@ -74,6 +74,9 @@ App.formattedNameAndVersion
 
 // Returns true/false whether the app running within the simulator or not
 App.inSimulator
+
+// Returns true/false whether the app is running in DEBUG mode
+App.isDebug
 ```
 
 ### DebugLogging
