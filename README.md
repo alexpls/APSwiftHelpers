@@ -1,7 +1,13 @@
-## APSwiftHelpers
+# APSwiftHelpers
 [![CocoaPods](https://img.shields.io/cocoapods/v/APSwiftHelpers.svg)](https://cocoapods.org/pods/APSwiftHelpers) [![Build Status](https://travis-ci.org/alexpls/APSwiftHelpers.svg?branch=master)](https://travis-ci.org/alexpls/APSwiftHelpers)
 
 Common helpers for developing iOS apps in Swift. Find them helpful? Help yourself.
+
+## Deprecation notice and Swift 3 support
+
+When I wrote these helpers Swift 3 had not yet been released. Since then, a lot of the native Swift APIs have been improved in such a way that the syntactical sugar these helpers provided is no longer necessary.
+
+Because of this I will no longer be maintaining this library. If you have a particular use-case for these helpers and want to see them updated for Swift 3, open an issue and let me know.
 
 ## Installation
 
